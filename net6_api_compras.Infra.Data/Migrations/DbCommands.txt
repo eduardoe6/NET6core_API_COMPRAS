@@ -1,0 +1,5 @@
+﻿Para rodar migration
+
+dotnet ef migrations add InitialMigration --project net6_api_compras.Infra.Data --startup-project net6_api_compras.Api
+
+dotnet ef database update --project net6_api_compras.Infra.Data --startup-project net6_api_compras.Api
