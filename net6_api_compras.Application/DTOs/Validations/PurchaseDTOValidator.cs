@@ -6,17 +6,17 @@ namespace net6_api_compras.Application.DTOs.Validations
     {
         public PurchaseDTOValidator()
         {
-            RuleFor(n => n.PersonId)
+            RuleFor(x => x.PersonId)
                 .NotEmpty()
                 .NotNull()
                 .WithMessage("Código da pessoa vinculada a compra deve ser informado");
 
-            RuleFor(p => p.ProductId)
+            RuleFor(x => x.ProductId)
                 .NotEmpty()
                 .NotNull()
                 .WithMessage("Código do produto vinculado a compra deve ser informado!");
 
-            RuleFor(p => p.Date)
+            RuleFor(x => x.Date)
                 .NotEmpty()
                 .NotNull()
                 .WithMessage("Data da compra deve ser informado");

@@ -41,7 +41,7 @@ namespace net6_api_compras.Application.Services
 
             await _personRepository.RemoveAsync(person);
 
-            return ResultService.Ok($"Pessoa de id: {id} foi removida com sucesso!");
+            return ResultService.Ok($"Pessoa de id [{id}] foi removida com sucesso!");
         }
 
         public async Task<ResultService> UpdateAsync(PersonDTO personDTO)

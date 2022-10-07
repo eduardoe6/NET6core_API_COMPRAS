@@ -17,7 +17,7 @@ namespace net6_api_compras.Infra.IoC
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
 
             services.AddScoped<IPersonRepository, PersonRepository>();
-            //services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped<IProductRepository, ProductRepository>();
             //services.AddScoped<IPurchaseRepository, PurchaseRepository>();
 
             return services;
@@ -27,6 +27,7 @@ namespace net6_api_compras.Infra.IoC
             services.AddAutoMapper(typeof(DomainToDtoMapping));
 
             services.AddScoped<IPersonService, PersonService>();
+            services.AddScoped<IProductService, ProductService>();
 
             return services;
         }

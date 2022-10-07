@@ -28,9 +28,9 @@ namespace net6_api_compras.Domain.Entities
 
         public void Validate(string name, string codErp, decimal price)
         {
-            DomainValidationException.When(string.IsNullOrEmpty(Name), "Nome do produto deve ser informado!");
-            DomainValidationException.When(string.IsNullOrEmpty(CodErp), "Código do produto deve ser informado!");
-            DomainValidationException.When(Price < 0, "Preço do produto deve ser informado!");
+            DomainValidationException.When(string.IsNullOrEmpty(name), "Nome do produto deve ser informado!");
+            DomainValidationException.When(string.IsNullOrEmpty(codErp), "Código do produto deve ser informado!");
+            DomainValidationException.When(price < 0, "Preço do produto deve ser informado!");
 
             Name = name;
             CodErp = codErp;

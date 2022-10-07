@@ -3,8 +3,8 @@
     public class ProductDTO
     {
         public int Id { get; set; }
-        public string Name { get; private set; }
-        public string CodErp { get; private set; }
-        public decimal Price { get; private set; }
+        public string Name { get; set; }
+        public string CodErp { get; set; }
+        public decimal Price { get; set; }
     }
 }

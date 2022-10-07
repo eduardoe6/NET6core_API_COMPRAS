@@ -1,6 +1,6 @@
-﻿using net6_api_compras.Domain.Entities;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using net6_api_compras.Domain.Entities;
 
 namespace net6_api_compras.Infra.Data.Maps
 {

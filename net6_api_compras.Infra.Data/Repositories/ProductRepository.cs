@@ -1,10 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using net6_api_compras.Domain.Entities;
+using net6_api_compras.Domain.Repositories;
 using net6_api_compras.Infra.Data.Context;
 
 namespace net6_api_compras.Infra.Data.Repositories
 {
-    public class ProductRepository
+    public class ProductRepository : IProductRepository
     {
         private readonly AppDbContext _context;
 

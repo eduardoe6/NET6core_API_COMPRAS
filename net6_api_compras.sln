@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32519.379
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "net6_api_compras.Domain", "net6_api_compras.Domain\net6_api_compras.Domain.csproj", "{B6908000-7F5F-4451-958C-15EF414FC39E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "net6_api_compras.Domain", "net6_api_compras.Domain\net6_api_compras.Domain.csproj", "{B6908000-7F5F-4451-958C-15EF414FC39E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "net6_api_compras.Infra.Data", "net6_api_compras.Infra.Data\net6_api_compras.Infra.Data.csproj", "{20D5D20F-C322-43DE-A6D7-08E2A3E0BA77}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "net6_api_compras.Infra.Data", "net6_api_compras.Infra.Data\net6_api_compras.Infra.Data.csproj", "{20D5D20F-C322-43DE-A6D7-08E2A3E0BA77}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "net6_api_compras.Application", "net6_api_compras.Application\net6_api_compras.Application.csproj", "{DF436DD9-5A74-44B2-94BC-DEAD0D2FCD7B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "net6_api_compras.Application", "net6_api_compras.Application\net6_api_compras.Application.csproj", "{DF436DD9-5A74-44B2-94BC-DEAD0D2FCD7B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "net6_api_compras.Infra.IoC", "net6_api_compras.Infra.IoC\net6_api_compras.Infra.IoC.csproj", "{FCA380E1-4345-4503-BB2E-AE9E351979A9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "net6_api_compras.Infra.IoC", "net6_api_compras.Infra.IoC\net6_api_compras.Infra.IoC.csproj", "{FCA380E1-4345-4503-BB2E-AE9E351979A9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "net6_api_compras.Api", "net6_api_compras.Api\net6_api_compras.Api.csproj", "{249B4B96-CF86-49A9-B3F2-997F005186BA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "net6_api_compras.Api", "net6_api_compras.Api\net6_api_compras.Api.csproj", "{249B4B96-CF86-49A9-B3F2-997F005186BA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

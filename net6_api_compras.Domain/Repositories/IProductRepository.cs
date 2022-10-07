@@ -6,7 +6,7 @@ namespace net6_api_compras.Domain.Repositories
     {
         Task<Product> CreateAsync(Product product);
         Task<Product> UpdateAsync(Product product);
-        Task<Product> RemoveAsync(Product product);
+        Task RemoveAsync(Product product);
         Task<Product> GetAsync(int id);
         Task<ICollection<Product>> GetAllAsync();
     }

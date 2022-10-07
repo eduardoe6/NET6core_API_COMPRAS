@@ -9,6 +9,7 @@ namespace net6_api_compras.Application.Mappings
         public DtoToDomainMapping()
         {
             CreateMap<PersonDTO, Person>();
+            CreateMap<ProductDTO, Product>();
         }
     }
 }
