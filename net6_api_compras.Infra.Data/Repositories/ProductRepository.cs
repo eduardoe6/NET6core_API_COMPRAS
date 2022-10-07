@@ -52,5 +52,10 @@ namespace net6_api_compras.Infra.Data.Repositories
                                     .AsNoTracking()
                                     .ToListAsync();
         }
+
+        public async Task<int> GetIdByCodeErpAsync(string codErp)
+        {
+            return (await _context.Products.FirstOrDefaultAsync(x => x.CodErp == codErp))?.Id ?? 0;
+        }
     }
 }

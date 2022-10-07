@@ -2,9 +2,14 @@
 
 namespace net6_api_compras.Domain.Repositories
 {
-    public interface IPurchaseRepository : IBaseRepository<Purchase>
+    public interface IPurchaseRepository
     {
-        Task<ICollection<Purchase>> GetByPersonId(int personId);
-        Task<ICollection<Purchase>> GetByProductId(int productId);
-    }
+		Task<Purchase> CreateAsync(Purchase purchase);
+		Task UpdateAsync(Purchase purchase);
+		Task RemoveAsync(Purchase purchase);
+		Task<Purchase> GetAsync(int id);
+		Task<ICollection<Purchase>> GetAllAsync();
+		Task<ICollection<Purchase>> GetByPersonIdAsync(int personId);
+		Task<ICollection<Purchase>> GetByProductIdAsync(int productId);
+	}
 }

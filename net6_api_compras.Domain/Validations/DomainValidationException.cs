@@ -1,6 +1,6 @@
 ﻿namespace net6_api_compras.Domain.Validations
 {
-    internal class DomainValidationException : Exception
+    public class DomainValidationException : Exception
     {
         public DomainValidationException(string error) : base(error) { }
 

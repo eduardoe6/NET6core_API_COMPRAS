@@ -3,8 +3,7 @@
     public class PurchaseDTO
     {
         public int Id { get; set; }
-        public int ProductId { get; private set; }
-        public int PersonId { get; private set; }
-        public DateTime Date { get; private set; }
+        public string CodErp { get; set; }
+        public string Document { get; set; }
     }
 }

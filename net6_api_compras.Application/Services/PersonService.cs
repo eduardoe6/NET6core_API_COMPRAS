@@ -20,11 +20,11 @@ namespace net6_api_compras.Application.Services
 
         public async Task<ResultService<PersonDTO>> CreateAsync(PersonDTO personDTO)
         {
-            if (personDTO == null) return ResultService.Fail<PersonDTO>("Objeto deve ser informado!");
+            if (personDTO == null) return ResultService.Fail<PersonDTO>("Objeto deve ser informado.");
 
             var result = new PersonDTOValidator().Validate(personDTO);
 
-            if (!result.IsValid) return ResultService.RequestError<PersonDTO>("Problemas de validação!", result);
+            if (!result.IsValid) return ResultService.RequestError<PersonDTO>("Problemas de validação", result);
 
             var person = _mapper.Map<Person>(personDTO);
 
@@ -41,12 +41,12 @@ namespace net6_api_compras.Application.Services
 
             await _personRepository.RemoveAsync(person);
 
-            return ResultService.Ok($"Pessoa de id [{id}] foi removida com sucesso!");
+            return ResultService.Ok($"Pessoa de id [{id}] foi removida com sucesso.");
         }
 
         public async Task<ResultService> UpdateAsync(PersonDTO personDTO)
         {
-            if (personDTO == null) return ResultService.Fail("Objeto deve ser informado!");
+            if (personDTO == null) return ResultService.Fail("Objeto deve ser informado.");
 
             var validation = new PersonDTOValidator().Validate(personDTO);
 
@@ -75,7 +75,7 @@ namespace net6_api_compras.Application.Services
         {
             var person = await _personRepository.GetAsync(id);
 
-            if (person == null) return ResultService.Fail<PersonDTO>("Pessoa não encontrada");
+            if (person == null) return ResultService.Fail<PersonDTO>("Pessoa não encontrada.");
 
             return ResultService.Ok(_mapper.Map<PersonDTO>(person));
         }

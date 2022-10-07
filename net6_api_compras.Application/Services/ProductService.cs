@@ -20,7 +20,7 @@ namespace net6_api_compras.Application.Services
 
         public async Task<ResultService<ProductDTO>> CreateAsync(ProductDTO productDTO)
         {
-            if (productDTO == null) return ResultService.Fail<ProductDTO>("Objeto deve ser informado!");
+            if (productDTO == null) return ResultService.Fail<ProductDTO>("Objeto deve ser informado.");
 
             var result = new ProductDTOValidator().Validate(productDTO);
 
@@ -41,12 +41,12 @@ namespace net6_api_compras.Application.Services
 
             await _productRepository.RemoveAsync(product);
 
-            return ResultService.Ok($"Produto de id [{id}] foi removido com sucesso!");
+            return ResultService.Ok($"Produto de id [{id}] foi removido com sucesso.");
         }
 
         public async Task<ResultService> UpdateAsync(ProductDTO productDTO)
         {
-            if (productDTO == null) return ResultService.Fail("Objeto deve ser informado!");
+            if (productDTO == null) return ResultService.Fail("Objeto deve ser informado.");
 
             var validation = new ProductDTOValidator().Validate(productDTO);
 
@@ -74,7 +74,7 @@ namespace net6_api_compras.Application.Services
         {
             var product = await _productRepository.GetAsync(id);
 
-            if (product == null) return ResultService.Fail<ProductDTO>("Produto não encontrado");
+            if (product == null) return ResultService.Fail<ProductDTO>("Produto não encontrado.");
 
             return ResultService.Ok(_mapper.Map<ProductDTO>(product));
         }

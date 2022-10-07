@@ -9,7 +9,6 @@
   <ItemGroup>
     <Compile Remove="Entities\Base.cs" />
     <Compile Remove="Repositories\IBaseRepository.cs" />
-    <Compile Remove="Repositories\IPurchaseRepository.cs" />
   </ItemGroup>
 
 </Project>

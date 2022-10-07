@@ -4,8 +4,8 @@ using net6_api_compras.Application.Services.Interfaces;
 
 namespace net6_api_compras.Api.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("api/[controller]")]
     public class ProductController : ControllerBase
     {
         private readonly IProductService _productService;

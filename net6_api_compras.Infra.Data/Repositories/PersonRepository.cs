@@ -49,9 +49,12 @@ namespace net6_api_compras.Infra.Data.Repositories
 
         public virtual async Task<ICollection<Person>> GetAllAsync()
         {
-            return await _context.Set<Person>()
-                                    .AsNoTracking()
-                                    .ToListAsync();
+            return await _context.Set<Person>().AsNoTracking().ToListAsync();
+        }
+
+        public async Task<int> GetIdByDocumentAsync(string document)
+        {
+            return (await _context.People.FirstOrDefaultAsync(x => x.Document == document))?.Id ?? 0;
         }
     }
 }

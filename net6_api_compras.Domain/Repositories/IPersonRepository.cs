@@ -9,5 +9,6 @@ namespace net6_api_compras.Domain.Repositories
         Task RemoveAsync(Person person);
         Task<Person> GetAsync(int id);
         Task<ICollection<Person>> GetAllAsync();
+        Task<int> GetIdByDocumentAsync(string document);
     }
 }
