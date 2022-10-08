@@ -2,13 +2,8 @@
 
 namespace net6_api_compras.Domain.Repositories
 {
-    public interface IProductRepository
+    public interface IProductRepository : IBaseRepository<Product>
     {
-        Task<Product> CreateAsync(Product product);
-        Task<Product> UpdateAsync(Product product);
-        Task RemoveAsync(Product product);
-        Task<Product> GetAsync(int id);
-        Task<ICollection<Product>> GetAllAsync();
         Task<int> GetIdByCodeErpAsync(string codErp);
     }
 }

@@ -7,10 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Repositories\BaseRepository.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\net6_api_compras.Domain\net6_api_compras.Domain.csproj" />
   </ItemGroup>
 

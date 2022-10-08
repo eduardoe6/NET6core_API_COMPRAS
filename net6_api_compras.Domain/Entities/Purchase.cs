@@ -2,23 +2,14 @@
 
 namespace net6_api_compras.Domain.Entities
 {
-    public sealed class Purchase
+    public sealed class Purchase : Base
     {
-        public int Id { get; private set; }
         public int ProductId { get; private set; }
         public int PersonId { get; private set; }
         public DateTime Date { get; private set; }
         public Person Person { get; set; }
         public Product Product { get; set; }
 
-        public Purchase(int id, int productId, int personId)
-        {
-            DomainValidationException.When(id < 0, "Id da compra deve ser informado!");
-
-            Id = id;
-
-            Validate(productId, personId);
-        }
         public Purchase(int productId, int personId)
         {
             Validate(productId, personId);

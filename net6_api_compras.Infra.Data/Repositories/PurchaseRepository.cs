@@ -5,35 +5,16 @@ using net6_api_compras.Infra.Data.Context;
 
 namespace net6_api_compras.Infra.Data.Repositories
 {
-    public class PurchaseRepository : IPurchaseRepository
+    public class PurchaseRepository : BaseRepository<Purchase>, IPurchaseRepository
     {
         private readonly AppDbContext _context;
 
-        public PurchaseRepository(AppDbContext context)
+        public PurchaseRepository(AppDbContext context) : base(context)
         {
             _context = context;
         }
 
-        public async Task<Purchase> CreateAsync(Purchase purchase)
-        {
-            _context.Add(purchase);
-            await _context.SaveChangesAsync();
-            return purchase;
-        }
-
-        public async Task RemoveAsync(Purchase purchase)
-        {
-            _context.Remove(purchase);
-            await _context.SaveChangesAsync();
-        }
-
-        public async Task UpdateAsync(Purchase purchase)
-        {
-            _context.Update(purchase);
-            await _context.SaveChangesAsync();
-        }
-
-        public async Task<Purchase> GetAsync(int id)
+        public override async Task<Purchase> GetAsync(int id)
         {
             var purchase = await _context.Purchases
                             .Include(x => x.Product)
@@ -42,7 +23,8 @@ namespace net6_api_compras.Infra.Data.Repositories
 
             return purchase;
         }
-        public async Task<ICollection<Purchase>> GetAllAsync()
+
+        public override async Task<ICollection<Purchase>> GetAllAsync()
         {
             return await _context.Purchases
                             .Include(x => x.Product)
@@ -65,8 +47,6 @@ namespace net6_api_compras.Infra.Data.Repositories
                             .Include(x => x.Product)
                             .Include(x => x.Person)
                             .Where(x => x.ProductId == productId).ToListAsync();
-
-
         }
     }
 }

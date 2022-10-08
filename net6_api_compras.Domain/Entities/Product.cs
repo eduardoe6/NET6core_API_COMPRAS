@@ -3,23 +3,13 @@
 namespace net6_api_compras.Domain.Entities
 {
     // Sealed não pode ser herdada
-    public sealed class Product
+    public sealed class Product : Base
     {
-        public int Id { get; private set; }
         public string Name { get; private set; }
         public string CodErp { get; private set; }
         public decimal Price { get; private set; }
         public ICollection<Purchase> Purchases { get; set; }
 
-        public Product(int id, string name, string codErp, decimal price)
-        {
-            DomainValidationException.When(id < 0, "Id do produto deve ser maior que zero!");
-
-            Id = id;
-
-            Validate(name, codErp, price);
-            Purchases = new List<Purchase>();
-        }
         public Product(string name, string codErp, decimal price)
         {
             Validate(name, codErp, price);
