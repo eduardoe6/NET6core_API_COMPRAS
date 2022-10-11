@@ -17,8 +17,8 @@ namespace net6_api_compras.Infra.Data.Repositories
         public override async Task<Purchase> GetAsync(int id)
         {
             var purchase = await _context.Purchases
-                            .Include(x => x.Product)
                             .Include(x => x.Person)
+                            .Include(x => x.Product)
                             .FirstOrDefaultAsync(x => x.Id == id);
 
             return purchase;
@@ -27,16 +27,16 @@ namespace net6_api_compras.Infra.Data.Repositories
         public override async Task<ICollection<Purchase>> GetAllAsync()
         {
             return await _context.Purchases
-                            .Include(x => x.Product)
                             .Include(x => x.Person)
+                            .Include(x => x.Product)
                             .ToListAsync();
         }
 
         public async Task<ICollection<Purchase>> GetByPersonIdAsync(int personId)
         {
             return await _context.Purchases
-                            .Include(x => x.Product)
                             .Include(x => x.Person)
+                            .Include(x => x.Product)
                             .Where(x => x.PersonId == personId).ToListAsync();
 
         }

@@ -32,5 +32,26 @@ namespace net6_api_compras.Api.Controllers
                 return BadRequest(ResultService.Fail(ex.Message));
             }
         }
+
+        [HttpGet]
+        [Route("{id}")]
+        public async Task<ActionResult> GetAsync(int id)
+        {
+            var result = await _purchaseService.GetAsync(id);
+
+            if (result.IsSuccess) return Ok(result);
+
+            return BadRequest(result);
+        }
+
+        [HttpGet]
+        public async Task<ActionResult> GetAllAsync()
+        {
+            var result = await _purchaseService.GetAllAsync();
+
+            if (result.IsSuccess) return Ok(result);
+
+            return BadRequest(result);
+        }
     }
 }

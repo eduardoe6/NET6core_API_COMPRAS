@@ -1,10 +1,10 @@
 ﻿namespace net6_api_compras.Application.DTOs
 {
-    public class PurchaseDTO
+    public class PurchaseDetailDTO
     {
         public int Id { get; set; }
-        public string CodErp { get; set; }
-        public string Document { get; set; }
+        public string Person { get; set; }
+        public string Product { get; set; }
         public DateTime Date { get; set; }
     }
 }
